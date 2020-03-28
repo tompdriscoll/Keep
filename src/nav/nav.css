@@ -18,16 +18,32 @@
 
 #nav-left{
     display: flex;
+    
     min-width: 232px;
     padding-right: 30px;
+    align-items: center;
+}
+
+#hamburger-holder{
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    padding: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 24px;
+    width: 24px; 
 }
 
 #keep-text{
     font-family: 'Product Sans',Arial,sans-serif;
     font-size: 22px;
     line-height: 24px;
-    opacity: 54%;
-    align-self: center
+ 
+    align-self: center;
+    padding-left: 4px;
+    color: #5f6368;
 }
 
 .svg-holder{
@@ -48,6 +64,13 @@
     margin: 3px;
 }
 
+.nav-icon{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 4px;
+    padding-right: 4px;
+}
+
 #nav-right{
     font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
     width: 100%;
@@ -56,8 +79,12 @@
     display: flex;
 }
 
+
+
 #nav-search{
     width: 100%;
+    padding-left:10px;
+    padding-right: 30px;
 }
 
 #search-box{
@@ -66,15 +93,28 @@
     border-radius: 8px;
     width: 100%;
     max-width: 720px;
-    padding: 0 10px;
+    
+    display: flex;
 }
 
 #search-text{
-    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif 
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif ;
+    align-self: center;
 }
 
 #nav-right-icons{
     display: flex;
+}
+
+#nav-end{
+    padding-left: 30px;
+    display: flex;
+}
+
+#profile-pic{
+    height: 32px;
+    width: 32px;
+    padding: 9px;
 }
 
 @font-face {
