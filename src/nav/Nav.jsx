@@ -1,39 +1,45 @@
 import React, { useState } from 'react';
-
+import styles from './nav.css'
 export function Nav(){
 
     return (
         <div id='nav-wrapper'>
-            <div id='nav-contents'>
+            <div id='nav-contents' className='nav-section'>
                 <div id='nav-left'>
-                <svg class='nav-svg'><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                <div classNmae='svg-holder'><svg class='nav-svg'><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div>
                 <img class="nav-icon" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" />
                 <span id='keep-text'>Keep</span>
                 </div>
-                <div id='nav-search'>
+                <div id='nav-right' className='nav-section'>
+                <div id='nav-search' className='nav-section'>
                     <div id='search-box'>
-                        <svg><path d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,
+                        <svg class='nav-svg'><path d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,
                         9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,
                         16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,
                         7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"></path>
                         </svg>
-                        <span>Search</span>
+                        <span id='search-text'>Search</span>
                     </div>
                 </div>
-                <div id='nav-right'>
-                    <svg><path xmlns="http://www.w3.org/2000/svg" d="M13 9v2h7V4h-2v2.74C16.53 5.07 
-                    14.4 4 12 4c-2.21 0-4.21.9-5.66 2.34S4 9.79 4 12c0 4.42 3.58 8 8 8 2.21 0 4.21-.9 
-                    5.66-2.34l-1.42-1.42A5.98 5.98 0 0 1 12 18c-3.31 0-6-2.69-6-6 0-1.65.67-3.15 
-                    1.76-4.24A5.98 5.98 0 0 1 12 6a6.01 6.01 0 0 1 5.19 3H13z"/>
-                    </svg>
-                    <svg>
+                <div id='nav-right-icons'>
+                    <div className='svg-holder'>
+                        <svg class='nav-svg'><path xmlns="http://www.w3.org/2000/svg" d="M13 9v2h7V4h-2v2.74C16.53 5.07 
+                        14.4 4 12 4c-2.21 0-4.21.9-5.66 2.34S4 9.79 4 12c0 4.42 3.58 8 8 8 2.21 0 4.21-.9 
+                        5.66-2.34l-1.42-1.42A5.98 5.98 0 0 1 12 18c-3.31 0-6-2.69-6-6 0-1.65.67-3.15 
+                        1.76-4.24A5.98 5.98 0 0 1 12 6a6.01 6.01 0 0 1 5.19 3H13z"/>
+                        </svg>
+                    </div>
+                    <div className='svg-holder'>
+                    <svg class='nav-svg'>
                     <path xmlns="http://www.w3.org/2000/svg" d="M20,9 L4,9 L4,5 L20,5 L20,9 Z M20,19 
                     L4,19 L4,15 L20,15 L20,19 Z M3,3 C2.45,3 2,3.45 2,4 L2,10 C2,10.55 2.45,11 3,11 
                     L21,11 C21.55,11 22,10.55 22,10 L22,4 C22,3.45 21.55,3 21,3 L3,3 Z M3,13 C2.45,13 
                     2,13.45 2,14 L2,20 C2,20.55 2.45,21 3,21 L21,21 C21.55,21 22,20.55 22,20 L22,14 C22,
                     13.45 21.55,13 21,13 L3,13 Z" id="icon" fill="#000000" fill-rule="nonzero"/>
                     </svg>
-                    <svg>
+                    </div>
+                    <div className='svg-holder'>
+                    <svg class='nav-svg'>
                     <path xmlns="http://www.w3.org/2000/svg" d="M13.85 22.25h-3.7c-.74 
                     0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2
                      15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 
@@ -49,7 +55,9 @@ export function Nav(){
                       1.33.77l.53.22.38 2.55z"/>
                       <circle xmlns="http://www.w3.org/2000/svg" cx="12" cy="12" r="3.5"/>
                     </svg>
+                    </div>
                     
+                </div>
                 </div>
             </div>
         </div>
