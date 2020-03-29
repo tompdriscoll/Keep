@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import {Nav} from './nav/Nav.jsx'
 import {Menu} from './menu/menu.jsx'
+import {Main} from './main/main'
 import './App.css';
 
 function App() {
@@ -10,7 +11,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Nav/>
-        <Menu/>
+        <div id='not-nav'>
+          <Menu/>
+          <Main/>
+        </div>
       </header>
     </div>
   );

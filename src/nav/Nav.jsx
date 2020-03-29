@@ -6,8 +6,8 @@ export function Nav(){
         <div id='nav-wrapper'>
             <div id='nav-contents' className='nav-section'>
                 <div id='nav-left'>
-                <div id='hamburger-holder' className='svg-holder'><svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div>
-                <img class="nav-icon" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" />
+                <div id='hamburger-holder' ><svg id='hamburger' ><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div>
+                <img className="nav-icon" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" />
                 <span id='keep-text'>Keep</span>
                 </div>
                 <div id='nav-right' className='nav-section'>
@@ -18,7 +18,7 @@ export function Nav(){
                         16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,
                         7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"></path>
                         </svg></div>
-                        <span id='search-text' type='text'>Search</span>
+                        <span id='search-text' type='text' contentEditable='true' value='Search'>Search</span>
                     </div>
                 </div>
                 <div id='nav-right-icons'>

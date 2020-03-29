@@ -1,0 +1,85 @@
+#note-form{
+    box-shadow: 0 3px 5px rgba(0,0,0,0.20);
+    background-color: #fff;
+    border-color: #e0e0e0;
+    border-radius: 8px;
+    width: 496px;
+    min-height: 125px;
+    position: absolute;
+    top: 0;
+}
+
+#form-title[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #80868b; 
+}
+
+#form-title[placeholder]{
+    color: black;
+    letter-spacing: .00625em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    min-height: 43px;
+    padding: 10px 15px;
+}
+
+#form-title[placeholder]:hover{
+    cursor: text;
+}
+
+#form-title:focus{
+    outline:none;
+}
+
+#form-tan{
+    padding-bottom: 15px;
+}
+
+#form-tan:focus{
+    outline:  none;
+}
+
+#form-tan[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #80868b; 
+}
+
+#form-tan[placeholder]{
+    color: black;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: 4px 16px 36px 16px;
+}
+
+#form-tan[placeholder]:hover{
+    cursor:text;
+}
+
+#form-close{
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.87);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    height: 36px;
+    padding: 8px 24px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#form-close:hover{
+    cursor: pointer;
+    background: rgba(95,99,104,0.157);
+    
+}

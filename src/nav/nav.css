@@ -19,7 +19,7 @@
 #nav-left{
     display: flex;
     
-    min-width: 232px;
+    min-width: 202px;
     padding-right: 30px;
     align-items: center;
 }
@@ -34,16 +34,29 @@
     cursor: pointer;
     height: 24px;
     width: 24px; 
+    opacity: 54%;
+}
+
+#hamburger-holder:hover{
+    opacity: 87%;
+    background: rgba(95,99,104,0.157);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#hamburger{
+    margin: 0;
+    padding: 0;
 }
 
 #keep-text{
     font-family: 'Product Sans',Arial,sans-serif;
     font-size: 22px;
     line-height: 24px;
- 
+    -webkit-font-smoothing: antialiased;
     align-self: center;
     padding-left: 4px;
     color: #5f6368;
+    
 }
 
 .svg-holder{
@@ -53,7 +66,19 @@
 }
 
 .svg-holder:hover{
-    background: lightgray;
+    opacity: 87%;
+    background: rgba(95,99,104,0.157);
+    cursor: pointer;
+}
+
+.svg-holder:first-of-type:hover{
+    background: inherit;
+}
+
+.svg-holder:first-of-type:hover svg{
+    opacity: 87%;
+    background: rgba(95,99,104,0.157);
+    border-radius: 50%;
 }
 
 .nav-svg {
@@ -87,6 +112,7 @@
     padding-right: 30px;
 }
 
+
 #search-box{
     height: 48px;
     background: #f1f3f4;
@@ -100,6 +126,8 @@
 #search-text{
     font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif ;
     align-self: center;
+ 
+    color: rgba(0,0,0,0.54);
 }
 
 #nav-right-icons{
@@ -141,3 +169,10 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
   
+  @font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(https://fonts.gstatic.com/s/googlesans/v16/4UaGrENHsxJlGDuGo1OIlL3Owp5eKQtG.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
