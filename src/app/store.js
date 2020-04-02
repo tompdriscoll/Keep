@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { createStore } from 'redux';
+import rootReducer from '../reducers/root_reducer';
 
-export default configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
-});
+const configureStore = (preloadedState = {}) => {
+  const store = createStore(rootReducer, preloadedState);
+  store.subscribe(() => {
+    localStorage.state = JSON.stringify(store.getState());
+  });
+  return store;
+}
+
+export default configureStore;
