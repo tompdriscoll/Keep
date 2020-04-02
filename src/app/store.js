@@ -1,8 +1,8 @@
 import { createStore } from 'redux';
-import rootReducer from '../reducers/root_reducer';
+import todosReducer from '../reducers/todos_reducer';
 
 const configureStore = (preloadedState = {}) => {
-  const store = createStore(rootReducer, preloadedState);
+  const store = createStore(todosReducer, preloadedState);
   store.subscribe(() => {
     localStorage.state = JSON.stringify(store.getState());
   });
