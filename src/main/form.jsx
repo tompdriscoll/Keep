@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { uniqueId } from '../util/id_generator'
+
 import styles from './form.css'
 class Form extends React.Component{
     constructor(props){
