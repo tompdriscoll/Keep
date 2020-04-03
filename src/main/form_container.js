@@ -13,8 +13,5 @@ const msp = state => ({
     receiveTodo: todo => dispatch(receiveTodo(todo))
   });
   
-  export default connect(
-    msp,
-    mdp
-  )(TodoList);
+  export default connect(msp, mdp)(TodoList);
   
