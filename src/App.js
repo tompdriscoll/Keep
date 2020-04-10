@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+
 import {Nav} from './nav/Nav.jsx'
 import {Menu} from './menu/menu.jsx'
 import {Main} from './main/main'
