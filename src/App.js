@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 import {Nav} from './nav/Nav.jsx'
 import {Menu} from './menu/menu.jsx'
-import {Main} from './main/main'
+import MainContainer from './main/main_container'
 import './App.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Nav/>
         <div id='not-nav'>
           <Menu/>
-          <Main/>
+          <MainContainer/>
         </div>
       </header>
     </div>
