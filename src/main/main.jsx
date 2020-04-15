@@ -8,15 +8,19 @@ class Main extends React.Component{
 
     }
 
+    openF(){
+        document.getElementById('note-form').classList.remove('hidden')
+    }
+
     render(){
     return(
-        <div id='okay'>
+        <div id='okay' >
             <div id='tan-wrapper'>
-                <button id='tan-button' onClick={form => this.props.openForm(form)}>
+                <button id='tan-button' onClick={() => this.openF()}>
                     <span id='tan-text'>Take a note...</span>
                     
                 </button>
-                <FormContainer />
+                <FormContainer id='form' className='hidden'/>
             </div>
             
         </div>

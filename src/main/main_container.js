@@ -4,12 +4,13 @@ import Main from './main'
 import {openForm, closeForm} from '../actions/form_actions'
 
 const msp = state => ({
-    state
+    state,
+    form: false
   });
 
     
   const mdp = dispatch => ({
-    openForm: form => dispatch(openForm(form))
+    openForm: () => dispatch(openForm())
   });
   
   export default connect(msp, mdp)(Main);

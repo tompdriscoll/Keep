@@ -10,23 +10,31 @@ class Form extends React.Component{
             title: "",
             body: ""
         };
-      
+      this.handleSubmit = this.handleSubmit.bind(this)
     }
+
+    handleSubmit(){
+        document.getElementById('note-form').classList.add('hidden')
+    }
+
+    
 
 
     render(){
-        if (!form){
-            return(null)
-        }
-        else return(
-        <div id='note-form'>
-            <div id='form-title' contentEditable='true' role='textbox' value={this.state.title} placeholder='Title'>
-         
-            </div>
+        // let fro
+        // if (!form){
+        //     return(null)
+        // }
+        // else 
+        return(
+        <div id='note-form' className='hidden'>
+            <div id='form-title' contentEditable='true' role='textbox' value={this.state.title} placeholder='Title'
+                onChange={this.poopScoop()}
+            ></div>
             <div contentEditable='true' role='textbox' id='form-tan' value={this.state.body} placeholder='Take a note...'>
 
             </div>
-            <div id='form-close' onClick={this.handleSubmit}>Close</div>
+            <div id='form-close' onClick={() => this.handleSubmit()}>Close</div>
         </div>
         )
     }
