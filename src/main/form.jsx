@@ -9,39 +9,37 @@ class Form extends React.Component{
             body: ""
         };
       this.handleSubmit = this.handleSubmit.bind(this)
-      this.poopScoop = this.poopScoop.bind(this)
+      this.updateTitle = this.updateTitle.bind(this)
     }
 
     handleSubmit(e){
-        debugger
-        this.setState({title: 'poop'})
-        console.log(this.state.title)
         document.getElementById('note-form').classList.add('hidden')
-        // let skin = this
     }
 
-    poopScoop(e){
-        debugger
-        
+    updateTitle(e){
+        let title = e.currentTarget.value        
+        this.setState({title: {title}})
+        console.log(this.state.title)
+    }
+
+    updateBody(e){
+        let body = e.currentTarget.value        
+        this.setState({body: {body}})
+        console.log(this.state.body)
     }
 
   
 
 
     render(){
-        // let fro
-        // if (!form){
-        //     return(null)
-        // }
-        // else 
+ 
         return(
         <div id='note-form' className='hidden'>
-            <div id='form-title' contentEditable='true' role='textbox' value={this.state.title} placeholder='Title'
-                onChange={e => this.poopScoop(e)}
-            ></div>
-            <div contentEditable='true' role='textbox' id='form-tan' value={this.state.body} 
-            onChange={this.poopScoop()} placeholder='Take a note...'>
-
+            <div id='form-title'  role='textbox' value={this.state.title} placeholder='Title'>
+                <input id='real-title' type='text' placeholder='Take a note...' onChange={e => this.updateTitle(e)}></input>
+            </div>
+            <div  role='textbox' id='form-tan' value={this.state.body} placeholder='Take a note...'>
+                <input id='real-tan' type='text' onChange={e => this.updateBody(e)}></input>
             </div>
             <div id='form-close' onClick={e => this.handleSubmit(e)}>Close</div>
         </div>

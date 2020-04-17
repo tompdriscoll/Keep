@@ -10,7 +10,8 @@ class Main extends React.Component{
 
     openF(){
         document.getElementById('note-form').classList.remove('hidden')
-        document.getElementById('form-title').focus()
+        // document.getElementById('form-title')
+        document.getElementById('real-title').focus()
     }
 
     render(){

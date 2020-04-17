@@ -26,11 +26,38 @@
     font-weight: 500;
     line-height: 1.5rem;
     min-height: 43px;
-    padding: 10px 15px;
+    
 }
 
-#form-title[placeholder]:hover{
+#real-title[placeholder]:hover{
     cursor: text;
+}
+
+#real-title:focus{
+    outline:none;
+}
+
+#real-title[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #80868b; 
+}
+
+#real-title[placeholder]{
+    color: black;
+    letter-spacing: .00625em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    min-height: 43px;
+}
+
+#real-title[placeholder]:hover{
+    cursor: text;
+}
+
+#real-title{
+    border:none;
 }
 
 #form-title:focus{
@@ -86,4 +113,8 @@
     cursor: pointer;
     background: rgba(95,99,104,0.157);
     
+}
+
+#form-title{
+    padding: 10px 15px;
 }
