@@ -87,9 +87,39 @@
     padding: 4px 16px 36px 16px;
 }
 
-#form-tan[placeholder]:hover{
+#real-tan[placeholder]:hover{
     cursor:text;
 }
+
+#real-tan{
+    padding-bottom: 15px;
+    border:none
+}
+
+#real-tan:focus{
+    outline:  none;
+}
+
+#real-tan[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #80868b; 
+}
+
+#real-tan[placeholder]{
+    color: black;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: 4px 16px 36px 0px;
+}
+
+#real-tan[placeholder]:hover{
+    cursor:text;
+}
+
+
 
 #form-close{
     box-sizing: border-box;
