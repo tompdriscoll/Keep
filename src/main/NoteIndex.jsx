@@ -3,8 +3,9 @@ import Note from './note'
 
 const NoteIndex = props => {
     let notes = props.notes.map( note => 
-        <Note title={note.title} body={note.body}/>
-    )
+        {debugger
+        return(<Note title={note.title} body={note.body}/>)
+    })
 
     return(
         <div id='note-index-top'>
