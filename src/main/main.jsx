@@ -6,8 +6,9 @@ import NoteIndex from './NoteIndex'
 class Main extends React.Component{
     constructor(props){
         super(props);
+
         this.state = {
-            notes: []
+            notes: JSON.parse(sessionStorage.notes)
         }
         this.addNote = this.addNote.bind(this)
      
@@ -15,12 +16,10 @@ class Main extends React.Component{
 
     addNote(note){
         let newNotes = this.state.notes
-        console.log(note)
-        console.log(newNotes)
         newNotes.push(note)
-        this.setState({notes: newNotes})
-        console.log(this.state.notes)
-       
+        this.setState({notes: newNotes}) 
+        let noteStorage = JSON.stringify(newNotes)
+        sessionStorage.setItem('notes', noteStorage)
     }
 
     openF(){

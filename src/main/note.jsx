@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styles from './note.css'
 
 class Note extends React.Component{
     constructor(props){
