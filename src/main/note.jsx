@@ -12,8 +12,9 @@ class Note extends React.Component{
 
     render(){
         return(
-            <div id='note-top'>
-                
+            <div className='note-top'>
+                <div>
+                </div> 
             </div>
         )
     }
