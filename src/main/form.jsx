@@ -13,18 +13,22 @@ class Form extends React.Component{
     }
 
     handleSubmit(e){
+        if (this.state.title != '' || this.state.body != ""){
+            this.props.addNote(this.state)
+        }
         document.getElementById('note-form').classList.add('hidden')
+        
     }
 
     updateTitle(e){
-        let title = e.currentTarget.value        
-        this.setState({title: {title}})
+        let title2 = e.currentTarget.value 
+        this.state.title = title2
         console.log(this.state.title)
     }
 
     updateBody(e){
         let body = e.currentTarget.value        
-        this.setState({body: {body}})
+        this.state.body = body
         console.log(this.state.body)
     }
 

@@ -6,7 +6,6 @@ import {closeForm} from '../actions/form_actions'
 // import { allTodos } from '../reducers/selectors';
 
 const msp = state => ({
-    // todos: allTodos(state),
     state
   });
   

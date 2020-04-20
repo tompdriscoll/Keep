@@ -5,12 +5,21 @@ import FormContainer from './form_container'
 class Main extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            notes: []
+        }
+        this.addNote = this.addNote.bind(this)
+    }
 
+    addNote(note){
+        let newNotes = this.state.notes.push(note)
+        this.setState({notes: {newNotes}})
+        console.log(this.state.notes)
+       
     }
 
     openF(){
         document.getElementById('note-form').classList.remove('hidden')
-        // document.getElementById('form-title')
         document.getElementById('real-tan').focus()
     }
 
@@ -22,7 +31,7 @@ class Main extends React.Component{
                     <span id='tan-text'>Take a note...</span>
                     
                 </button>
-                <FormContainer id='form' className='hidden'/>
+                <FormContainer addNote={this.addNote} id='form' className='hidden'/>
             </div>
             
         </div>
