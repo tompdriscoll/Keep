@@ -6,9 +6,10 @@ import NoteIndex from './NoteIndex'
 class Main extends React.Component{
     constructor(props){
         super(props);
-
+        let check = []
+        if (sessionStorage.notes) check = JSON.parse(sessionStorage.notes)
         this.state = {
-            notes: JSON.parse(sessionStorage.notes)
+            notes: check
         }
         this.addNote = this.addNote.bind(this)
      

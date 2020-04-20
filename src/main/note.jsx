@@ -14,8 +14,8 @@ class Note extends React.Component{
         return(
             <div className='note-top'>
                 <div>
-                    <h1>{this.state.title}</h1>
-                    <h1>{this.state.body}</h1>
+                    <p className='note-title'>{this.state.title}</p>
+                    <p className='note-body'>{this.state.body}</p>
                 </div> 
             </div>
         )
