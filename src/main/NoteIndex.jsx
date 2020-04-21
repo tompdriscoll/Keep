@@ -1,6 +1,8 @@
 import React from 'react'
 import Note from './note'
 
+import styles from './noteIndex.css'
+
 const NoteIndex = props => {
     let notes = props.notes.map( note => 
        

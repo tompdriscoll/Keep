@@ -10,13 +10,22 @@ class Note extends React.Component{
         }
     }
 
+    triggerFocus(e){
+        e.currentTarget.lastChild.classList.toggle('hidden')
+        e.currentTarget.firstChild.classList.toggle('hidden')
+    }
+
     render(){
         return(
-            <div className='note-top'>
-                <div>
-                    <input type='text' className='note-title note-input' value={this.state.title}></input>
-                    <input type='text' className='note-body note-input'value={this.state.body}></input>
+            <div className='note-top' onClick={ e => this.triggerFocus(e)}>
+                <div className='note-prev' >
+                    <div className='note-title'>{this.state.title}</div>
+                    <div className='note-body'>{this.state.body}</div>
                 </div> 
+                <div className='note-zoom hidden' onClick={ e => this.triggerFocus(e)}>
+                    <div className='note-title'>{this.state.title}</div>
+                    <div className='note-body'>{this.state.body}</div>
+                </div>
             </div>
         )
     }
