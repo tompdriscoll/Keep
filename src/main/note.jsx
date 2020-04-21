@@ -14,8 +14,8 @@ class Note extends React.Component{
         return(
             <div className='note-top'>
                 <div>
-                    <p className='note-title'>{this.state.title}</p>
-                    <p className='note-body'>{this.state.body}</p>
+                    <input type='text' className='note-title note-input' value={this.state.title}></input>
+                    <input type='text' className='note-body note-input'value={this.state.body}></input>
                 </div> 
             </div>
         )
