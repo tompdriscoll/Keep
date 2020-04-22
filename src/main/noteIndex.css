@@ -1,4 +1,6 @@
 #note-index-top{
     display: flex;
     justify-content: space-around;
+    width:  84%;
+    margin:  auto;
 }
