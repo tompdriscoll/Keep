@@ -15,16 +15,18 @@ class Note extends React.Component{
         e.currentTarget.firstChild.classList.toggle('hidden')
     }
 
+    trigger
+
     render(){
         return(
-            <div className='note-top' onClick={ e => this.triggerFocus(e)}>
+            <div className='note-top' onClick={ e => this.triggerFocus(e) }>
                 <div className='note-prev' >
                     <div className='note-title'>{this.state.title}</div>
                     <div className='note-body'>{this.state.body}</div>
                 </div> 
-                <div className='note-zoom hidden' onClick={ e => this.triggerFocus(e)}>
-                    <div className='note-title'>{this.state.title}</div>
-                    <div className='note-body'>{this.state.body}</div>
+                <div className='note-zoom hidden' >
+                    <div className='zoom-title'>{this.state.title}</div>
+                    <div className='zoom-body'>{this.state.body}</div>
                 </div>
             </div>
         )

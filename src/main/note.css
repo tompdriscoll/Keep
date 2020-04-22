@@ -1,12 +1,16 @@
 .note-top{
     width: 240px;
-    border: 1px solid #e0e0e0 ;
-    border-radius: 8px;
+   
 }
 
 .note-input{
     border: none;
 
+}
+
+.note-prev{
+    border: 1px solid #e0e0e0 ;
+    border-radius: 8px;
 }
 
 .note-title{
@@ -30,7 +34,31 @@
 }
 
 .note-zoom{
+    position: absolute;
     width: 600px;
     border: 1px solid #e0e0e0 ;
     border-radius: 8px;
+    background: white;
+    left: 130px;
+    top: 171.325px;
+}
+
+.zoom-title{
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    padding-bottom: 12px;
+    padding-top: 16px;
+    padding: 10px 15px;
+}
+
+.zoom-body{
+    letter-spacing: .00625em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 4px 16px 12px 16px;
 }
