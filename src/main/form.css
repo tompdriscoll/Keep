@@ -148,3 +148,13 @@
 #form-title{
     padding: 10px 15px;
 }
+
+#fake-modal{
+    background: lightgray;
+    opacity: 68.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}

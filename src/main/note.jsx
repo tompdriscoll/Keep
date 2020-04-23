@@ -12,7 +12,8 @@ class Note extends React.Component{
 
     triggerFocus(e){
         e.currentTarget.parentNode.lastChild.classList.toggle('hidden')
-        e.currentTarget.parentNode.firstChild.classList.toggle('hidden')
+        e.currentTarget.parentNode.children[1].classList.toggle('hidden')
+        document.getElementById('fake-modal').classList.toggle('hidden')
     }
 
     updateTitle(e){
@@ -29,7 +30,7 @@ class Note extends React.Component{
     render(){
         return(
             <div className='note-top' >
-                <div></div>
+                <div id='fake-modal' className='hidden'></div>
                 <div className='note-prev' onClick={ e => this.triggerFocus(e) }>
                     <div className='note-title'>{this.state.title}</div>
                     <div className='note-body'>{this.state.body}</div>
