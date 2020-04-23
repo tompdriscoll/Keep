@@ -28,7 +28,6 @@ class Form extends React.Component{
     updateBody(e){
         let body = e.currentTarget.value        
         this.state.body = body
-        console.log(this.state.body)
     }
 
   
