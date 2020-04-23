@@ -5,7 +5,22 @@
 
 .note-input{
     border: none;
+    width: 100%;
+    background: transparent;
+}
 
+.note-input:focus{
+    outline: none;
+}
+.note-input[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #80868b; 
+}
+
+::placeholder{
+    color: black;
+    
+    
 }
 
 .note-prev{

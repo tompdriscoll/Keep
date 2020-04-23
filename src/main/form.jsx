@@ -23,7 +23,6 @@ class Form extends React.Component{
     updateTitle(e){
         let title2 = e.currentTarget.value 
         this.state.title = title2
-        console.log(this.state.title)
     }
 
     updateBody(e){
