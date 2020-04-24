@@ -26,6 +26,13 @@ class Note extends React.Component{
         this.state.body = body
     }
 
+    handleSubmit(e){
+        if (this.state.title != '' || this.state.body != ""){
+            this.props.addNote(this.state)
+        }
+        document.getElementById('note-form').classList.add('hidden')
+        
+    }
 
     render(){
         return(
@@ -40,7 +47,7 @@ class Note extends React.Component{
                     <input  className='zoom-body note-input'  type='text' placeholder={this.state.body} onChange={e => this.updateBody(e)}></input>
                 </div>
                 <div>
-                    <button/>
+                    <button onClick={() => this.handleSubmit()}>Close</button>
                 </div>
             </div>
         )
