@@ -6,7 +6,8 @@ class Form extends React.Component{
         super(props);
         this.state = {
             title: "",
-            body: ""
+            body: "",
+            time: props.time
         };
       this.handleSubmit = this.handleSubmit.bind(this)
       this.updateTitle = this.updateTitle.bind(this)
@@ -43,6 +44,7 @@ class Form extends React.Component{
             <div  role='textbox' id='form-tan' value={this.state.body} placeholder='Take a note...'>
                 <input id='real-tan' type='text' onChange={e => this.updateBody(e)} placeholder='Take a note...'></input>
             </div>
+            <div className=''></div>
             <div id='form-close' onClick={e => this.handleSubmit(e)}>Close</div>
         </div>
         )

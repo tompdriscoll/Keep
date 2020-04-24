@@ -11,7 +11,7 @@ class Note extends React.Component{
     }
 
     triggerFocus(e){
-        e.currentTarget.parentNode.lastChild.classList.toggle('hidden')
+        e.currentTarget.parentNode.children[2].classList.toggle('hidden')
         e.currentTarget.parentNode.children[1].classList.toggle('hidden')
         document.getElementById('fake-modal').classList.toggle('hidden')
     }
@@ -38,6 +38,9 @@ class Note extends React.Component{
                 <div className='note-zoom hidden' >                
                     <input  className='zoom-title note-input'  type='text' placeholder={this.state.title} onChange={e => this.updateTitle(e)}></input>
                     <input  className='zoom-body note-input'  type='text' placeholder={this.state.body} onChange={e => this.updateBody(e)}></input>
+                </div>
+                <div>
+                    <button/>
                 </div>
             </div>
         )
