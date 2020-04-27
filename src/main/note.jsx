@@ -6,7 +6,8 @@ class Note extends React.Component{
         super(props)
         this.state = {
             title: props.title,
-            body: props.body
+            body: props.body,
+            time: JSON.parse(props.time)
         }
     }
 
@@ -35,6 +36,10 @@ class Note extends React.Component{
     }
 
     render(){
+    
+        let updateTime;
+        let time = new Date(this.state.time)
+        updateTime = 'edited ' + time.getHours() + ':' + time.getMinutes()
         return(
             <div className='note-top' >
                 <div id='fake-modal' className='hidden' onClick={ e => this.triggerFocus(e) }></div>
@@ -45,6 +50,7 @@ class Note extends React.Component{
                 <div className='note-zoom hidden' >                
                     <input  className='zoom-title note-input'  type='text' placeholder={this.state.title} onChange={e => this.updateTitle(e)}></input>
                     <input  className='zoom-body note-input'  type='text' placeholder={this.state.body} onChange={e => this.updateBody(e)}></input>
+                    <div>{updateTime}</div>
                 <div className='close-button' onClick={() => this.handleSubmit()}>Close</div>
                 </div>
             </div>

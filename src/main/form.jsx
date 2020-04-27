@@ -7,7 +7,7 @@ class Form extends React.Component{
         this.state = {
             title: "",
             body: "",
-            time: props.time
+            
         };
       this.handleSubmit = this.handleSubmit.bind(this)
       this.updateTitle = this.updateTitle.bind(this)
@@ -15,6 +15,7 @@ class Form extends React.Component{
 
     handleSubmit(e){
         if (this.state.title != '' || this.state.body != ""){
+            this.state.time = JSON.stringify(new Date)
             this.props.addNote(this.state)
         }
         document.getElementById('note-form').classList.add('hidden')
@@ -44,7 +45,7 @@ class Form extends React.Component{
             <div  role='textbox' id='form-tan' value={this.state.body} placeholder='Take a note...'>
                 <input id='real-tan' type='text' onChange={e => this.updateBody(e)} placeholder='Take a note...'></input>
             </div>
-            <div className=''></div>
+            <div id='zoom-time' className=''></div>
             <div id='form-close' className='close-button'onClick={e => this.handleSubmit(e)}>Close</div>
         </div>
         )
