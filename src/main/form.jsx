@@ -18,7 +18,7 @@ class Form extends React.Component{
             this.props.addNote(this.state)
         }
         document.getElementById('note-form').classList.add('hidden')
-        
+
     }
 
     updateTitle(e){
@@ -45,7 +45,7 @@ class Form extends React.Component{
                 <input id='real-tan' type='text' onChange={e => this.updateBody(e)} placeholder='Take a note...'></input>
             </div>
             <div className=''></div>
-            <div id='form-close' onClick={e => this.handleSubmit(e)}>Close</div>
+            <div id='form-close' className='close-button'onClick={e => this.handleSubmit(e)}>Close</div>
         </div>
         )
     }

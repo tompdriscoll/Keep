@@ -121,7 +121,7 @@
 
 
 
-#form-close{
+.close-button{
     box-sizing: border-box;
     color: rgba(0,0,0,0.87);
     overflow: hidden;

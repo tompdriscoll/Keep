@@ -37,7 +37,7 @@ class Note extends React.Component{
     render(){
         return(
             <div className='note-top' >
-                <div id='fake-modal' className='hidden'></div>
+                <div id='fake-modal' className='hidden' onClick={ e => this.triggerFocus(e) }></div>
                 <div className='note-prev' onClick={ e => this.triggerFocus(e) }>
                     <div className='note-title'>{this.state.title}</div>
                     <div className='note-body'>{this.state.body}</div>
@@ -45,9 +45,7 @@ class Note extends React.Component{
                 <div className='note-zoom hidden' >                
                     <input  className='zoom-title note-input'  type='text' placeholder={this.state.title} onChange={e => this.updateTitle(e)}></input>
                     <input  className='zoom-body note-input'  type='text' placeholder={this.state.body} onChange={e => this.updateBody(e)}></input>
-                </div>
-                <div>
-                    <button onClick={() => this.handleSubmit()}>Close</button>
+                <div className='close-button' onClick={() => this.handleSubmit()}>Close</div>
                 </div>
             </div>
         )
