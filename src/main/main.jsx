@@ -16,6 +16,7 @@ class Main extends React.Component{
     }
 
     addNote(note){
+    
         let newNotes = this.state.notes
         newNotes.push(note)
         this.setState({notes: newNotes}) 

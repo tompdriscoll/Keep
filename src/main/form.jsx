@@ -1,55 +1,64 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 import styles from './form.css'
 
-class Form extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            title: "",
-            body: "",
+// class Form extends React.Component{
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             title: "",
+//             body: "",
             
-        };
-      this.handleSubmit = this.handleSubmit.bind(this)
-      this.updateTitle = this.updateTitle.bind(this)
-    }
+//         };
+//       this.handleSubmit = this.handleSubmit.bind(this)
+      
+//     }
 
-    handleSubmit(e){
-        if (this.state.title != '' || this.state.body != ""){
-            this.state.time = JSON.stringify(new Date)
-            this.props.addNote(this.state)
+function Form(props){ 
+    const [title, setTitle] = useState("")
+    const [body, setBody] = useState("")
+    const [time, setTime] = useState(JSON.stringify(new Date))
+    
+    const handleSubmit = () => {
+        if (title != '' || body != ""){
+            let note = {title, body, time}
+            
+            props.addNote(note)
         }
         document.getElementById('note-form').classList.add('hidden')
 
     }
 
-    updateTitle(e){
-        let title2 = e.currentTarget.value 
-        this.state.title = title2
-    }
+    // updateTitle(e){
+    //     let title2 = e.currentTarget.value 
+    //     this.state.title = title2
+    // }
 
-    updateBody(e){
-        let body = e.currentTarget.value        
-        this.state.body = body
-    }
+    // updateBody(e){
+    //     let body = e.currentTarget.value        
+    //     this.state.body = body
+    // }
 
   
 
 
-    render(){
+    // render(){
  
         return(
         <div id='note-form' className='hidden'>
-            <div id='form-title'  role='textbox' value={this.state.title} placeholder='Title'>
-                <input id='real-title' type='text' placeholder='Title' onChange={e => this.updateTitle(e)}></input>
+            <div id='form-title'  role='textbox' value={title} placeholder='Title'>
+                {/* <input id='real-title' type='text' placeholder='Title' onChange={e => this.updateTitle(e)}></input> */}
+                <input id='real-title' type='text' placeholder='Title' onChange={ e => setTitle(e.currentTarget.value)}></input>
             </div>
-            <div  role='textbox' id='form-tan' value={this.state.body} placeholder='Take a note...'>
-                <input id='real-tan' type='text' onChange={e => this.updateBody(e)} placeholder='Take a note...'></input>
+            <div  role='textbox' id='form-tan' value={body} placeholder='Take a note...'>
+                {/* <input id='real-tan' type='text' onChange={e => this.updateBody(e)} placeholder='Take a note...'></input> */}
+                <input id='real-tan' type='text' onChange={e => setBody(e.currentTarget.value)} placeholder='Take a note...'></input>
             </div>
             <div id='zoom-time' className=''></div>
-            <div id='form-close' className='close-button'onClick={e => this.handleSubmit(e)}>Close</div>
+            <div id='form-close' className='close-button'onClick={handleSubmit}>Close</div>
         </div>
         )
-    }
+    // }
 }
 
 export default Form;

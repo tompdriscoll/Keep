@@ -28,8 +28,9 @@ class Note extends React.Component{
     }
 
     handleSubmit(e){
-      
-        
+        e.currentTarget.parentNode.parentNode.children[2].classList.toggle('hidden')
+        e.currentTarget.parentNode.parentNode.children[1].classList.toggle('hidden')
+        document.getElementById('fake-modal').classList.toggle('hidden')
     }
 
     render(){
@@ -45,10 +46,10 @@ class Note extends React.Component{
                     <div className='note-body'>{this.state.body}</div>
                 </div> 
                 <div className='note-zoom hidden' >                
-                    <input  className='zoom-title note-input'  type='text' placeholder={this.state.title} onChange={e => this.updateTitle(e)}></input>
-                    <input  className='zoom-body note-input'  type='text' placeholder={this.state.body} onChange={e => this.updateBody(e)}></input>
+                    <input className='zoom-title note-input'  type='text' placeholder={this.state.title} onChange={e => this.updateTitle(e)}></input>
+                    <input className='zoom-body note-input'  type='text' placeholder={this.state.body} onChange={e => this.updateBody(e)}></input>
                     <div>{updateTime}</div>
-                <div className='close-button' onClick={e => this.handleSubmit(e)}>Close</div>
+                    <div id='zoom-close' className='close-button' onClick={e => this.handleSubmit(e)}>Close</div>
                 </div>
             </div>
         )
